@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced 3D Modelling in Blender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+    .search-box {
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Course Content */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .course-image,
+    .course-details {
+      flex: 1 1 100%;
+    }
+    .course-image img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .course-price {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .info-list {
+      line-height: 1.8;
+      font-size: 14px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .enroll {
+      background-color: black;
+      color: white;
+    }
+    .gift {
+      background-color: white;
+      color: black;
+      border: 1px solid #ccc;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .description {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .course-image,
+      .course-details {
+        flex: 1 1 45%;
+      }
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .navbar nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Aca.</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="#">Courses</a>
+      <a href="#">Mentors</a>
+      <a href="#">Students</a>
+      <input type="text" class="search-box" placeholder="Search">
+      <a href="#">Cart (3)</a>
+      <a href="#">Log in</a>
+    </nav>
+  </header>
+
+  <!-- Course Content -->
+  <div class="container">
+    <div class="course-image">
+      <img src="3d-blender-course tag.jfsajf.jpg" alt="Blender Course">
+    </div>
+    <div class="course-details">
+      <div class="course-price">49.99 USD</div>
+      <div class="info-list">
+        <div>LESSONS: 12</div>
+        <div>DIFFICULTY: Moderate</div>
+        <div>Students: 3,215</div>
+        <div>Language: English</div>
+        <div>Subtitles: English, Spanish, French, Italian, etc.</div>
+        <div>Additional resources: 12 files</div>
+        <div>Duration: 8h 23m</div>
+        <div>Critique session: Individual recordings</div>
+        <div>Certificate: Upon completion of the course</div>
+      </div>
+      <div class="buttons">
+        <button class="enroll">Enroll a course</button>
+        <button class="gift">Buy as a gift</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div>
+      <h1>Advanced 3D Modelling in Blender</h1>
+      <p class="description">
+        Embark on a creative journey and master the art of crafting your unique 3D character using Blender. Dive into the fascinating process of bringing your imaginative ideas to life as you explore the intricate features of Blender.<br><br>
+        Unleash your creativity as you learn to meticulously model, enhance details, and skillfully manipulate light and color. With each step, you'll unveil the captivating characters residing in your mind and unleash them upon the world.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
